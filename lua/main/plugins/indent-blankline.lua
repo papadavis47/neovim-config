@@ -11,3 +11,5 @@ return {
 		},
 	},
 }
+
+-- this is a comment testing Neovim

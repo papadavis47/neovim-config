@@ -9,6 +9,7 @@ return {
   config = function()
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
+    -- This is a comment testing Neovim
 
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
@@ -82,8 +83,6 @@ return {
     lspconfig["rust_analyzer"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      inlay_hints = { enabled = true },
-      vim.lsp.inlay_hint(0, nil),
     })
 
     -- configure Go server
@@ -100,15 +99,6 @@ return {
         },
       },
     })
-
-    -- Below is an attempt to get inlay hints working
-    -- I need to keep working on it - March 04, 2024
-    -- lspconfig["rust_analyzer"].setup({
-    --   capabilities = capabilities,
-    --   on_attach = function(client, bufnr)
-    --     vim.lsp.inlay_hint(0, true)
-    --   end,
-    -- })
 
     -- configure typescript server with plugin
     lspconfig["tsserver"].setup({
