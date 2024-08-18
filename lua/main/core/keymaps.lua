@@ -14,6 +14,7 @@ keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 -- now is the time
 -- My own custom keymappings from .vimrc
 keymap.set("n", "<leader>s", ":w<CR>", { remap = false, silent = true, desc = "Save File" })
+keymap.set("n", "<leader>w", ":wq<CR>", { remap = false, silent = true, desc = "Save and Quit" })
 keymap.set("n", "Q", ":q<CR>", { remap = false, silent = true, desc = "Exit" })
 keymap.set("n", "<leader>e", ":bd<CR>", { remap = false, silent = true, desc = "Delete Buffer" })
 keymap.set("n", "K", "5k")
